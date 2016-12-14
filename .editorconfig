@@ -1,0 +1,10 @@
+root = true
+[*]
+charset = utf-8
+indent_style = space
+
+[*.js]
+indent_size = 2
+
+[*.{styl,scss,sass,less,css,html,ejs,hbs,jade,pug}]
+indent_size = 4
