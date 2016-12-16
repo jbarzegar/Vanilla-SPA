@@ -1,3 +1,8 @@
-body {
-    font-family: sans-serif;
-}
+@import './utils/vars';
+@import './utils/type';
+@import './utils/responsive';
+@import './utils/animations';
+
+// DO NOT REMOVE
+/* inject:start */
+/* inject:end */

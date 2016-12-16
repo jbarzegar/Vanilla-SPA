@@ -26,7 +26,7 @@ const styles = {
     in: path.join('src', 'assets', 'styles', `${styleEntry}`),
     watch: [
       path.join('src', 'assets', 'styles', '**', `*.${styleExt}`),
-      path.join('src', 'modules', '**', `${styleExt}`)
+      path.join('src', 'modules', '**', `*.${styleExt}`)
     ],
     out: path.join('.build', 'css')
   }
@@ -37,15 +37,17 @@ const imgPath = path.join('src', 'assets', 'img', '**')
 const images = {
   dev: {
     in: [
-      path.join(imgPath, '*', 'jpg'),
-      path.join(imgPath, '*', 'jpeg'),
-      path.join(imgPath, '*', 'png'),
-      path.join(imgPath, '*', 'gif'),
-      path.join(imgPath, '*', 'svg')
+      path.join(imgPath, '*.jpg'),
+      path.join(imgPath, '*.jpeg'),
+      path.join(imgPath, '*.png'),
+      path.join(imgPath, '*.gif'),
+      path.join(imgPath, '*.svg')
     ],
     out: path.join('.build', 'img')
   }
 }
+
+console.log(images.dev.in)
 
 const html = {
   dev: {

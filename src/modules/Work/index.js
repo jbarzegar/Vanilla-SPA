@@ -1,13 +1,12 @@
 import { dom } from '../helpers/dom'
 
 export default () => {
-  dom.fetchPage('contact.html')
+  dom.fetchPage('work.html')
     .then(page => dom.renderPage(page))
-    .then(() => dom.changeNav('contact'))
+    .then(() => dom.changeNav('work'))
     .then(() => init())
 }
 
 function init() {
-  // dom.changeNav('contact')
-  return true
+  console.log('LOL')
 }

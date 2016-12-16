@@ -12,6 +12,8 @@ import pcss from 'gulp-postcss'
 import autoprefixer from 'autoprefixer'
 import rucksack from 'rucksack-css'
 
+import size from 'gulp-size'
+
 import { styles } from '../conf/paths'
 
 const plugins = [
@@ -37,7 +39,7 @@ function compile(reload) {
     endtag: '/* inject:end */',
     addRootSlash: false,
     transform: (filepath) => {
-      return `@import '${filepath}'`
+      return `@import '${filepath}';`
     }
   }
 
@@ -49,6 +51,7 @@ function compile(reload) {
     .on('error', handleErr)
     .pipe(pcss(plugins))
     .pipe(maps.write('.'))
+    .pipe(size())
     .pipe(gulp.dest(styles.dev.out))
     .pipe(reload())
 }

@@ -1,0 +1,14 @@
+body, html {
+    font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: responsive;
+}
+
+
+$inital_default: 16px;
+@function rem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}

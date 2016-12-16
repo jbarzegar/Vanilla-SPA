@@ -5,19 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello world!</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Trim trailing slash (it breaks the router) -->
+    <script>
+        var pattern = /\/$/;
+        if (window.location.pathname.match(pattern) && window.location.pathname !== '/') {
+            window.location.pathname = window.location.pathname.replace(/\/$/, "");
+            console.log(window.location.pathname)
+        }
+    </script>
 </head>
 <body>
 
-    <nav>
-        <a href="/" data-navigo="">Home</a>
-        <a href="about" data-navigo>About</a>
-        <a href="contact" data-navigo>Contact</a>
+    <nav class="navbar">
+        <ul>
+            <li class="hidden home"><a href="/" data-navigo>Welcome</a></li>
+            <li class="hidden about"><a href="about" data-navigo>Who we are</a></li>
+            <li class="hidden work"><a href="work" data-navigo>What we do</a></li>
+            <li class="hidden contact"><a href="contact" data-navigo>Contact</a></li>
+        </ul>
+
+
+
+
     </nav>
 
-    <div id="app"></div>
+    <div id="app">
+        <section class="hero intro">
+            <header>
+                <h1>Some marketing title</h1>
 
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-    <script src="js/main.js"></script>
+                <h2>A short sentence about how great this product is supposed to be.</h2>
+            </header>
+            <div class="buttonWrap">
+                <button class="to-about">
+                    <a href="about" data-navigo>Learn More</a>
+                </button>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch" async></script>
+    <script src="/js/main.js" async></script>
 </body>
 </html>
