@@ -1,0 +1,45 @@
+.about-section, .about-section .inner-wrap {
+    display: flex;
+}
+.about-section {
+    min-height: rem(365);
+    height: 50vh;
+    .picture-wrap {
+        flex: 1 1 30%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .inner-wrap {
+        flex-direction: column;
+        flex: 1 1 70%;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        padding: rem(10) rem(40);
+
+        h3, p {
+            @extend %animated;
+            opacity: 0;
+        }
+
+        h3 {
+            font-weight: bold;
+            color: $main_white;
+            font-size: rem(25);
+        }
+        p {
+            color: $sub_white;
+            font-size: rem(20);
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .about-section--#{$i} {
+        background: darken($blue, $i * 2%);
+        .picture-wrap {
+            background-image: url("../img/about-#{$i}.jpg");
+        }
+    }
+}

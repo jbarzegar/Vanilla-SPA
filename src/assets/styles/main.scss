@@ -6,3 +6,24 @@
 // DO NOT REMOVE
 /* inject:start */
 /* inject:end */
+
+body, html {
+    background-color: $nav_purple;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: solid 1px rgba(white, 0.2);
+    padding: rem(15) rem(40);
+    border-radius: rem(30);
+    font-size: rem(11);
+    letter-spacing: rem(2);
+    color: white;
+    transition: all ease 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:hover {
+        background: rgba(white, 0.2);
+    }
+}

@@ -1,9 +1,15 @@
 /* global fetch */
+import router from './router'
 const dom = {}
 
 // Simple selector function
 function $(selector) {
   return document.querySelector(selector)
+}
+
+// Select all function
+function $$(selector) {
+  return document.querySelectorAll(selector)
 }
 
 // Animation end prefixes
@@ -38,4 +44,23 @@ dom.changeNav = className => {
   $(`.navbar .${className}`).classList.add('active')
 }
 
-export { dom, $, onAnimationEnd }
+dom.transitionIn = () => {
+  const animatedContainer = $('.section-transition-container')
+  return new Promise(resolve => {
+    animatedContainer.classList.remove('fadeOut')
+    animatedContainer.classList.add('fadeIn')
+    resolve(true)
+  })
+}
+
+dom.transitionOut = route => {
+  const animatedContainer = $('.section-transition-container')
+  animatedContainer.classList.remove('fadeIn')
+  animatedContainer.classList.add('fadeOut')
+  return new Promise(resolve => {
+    router.navigate(route)
+    resolve(true)
+  })
+}
+
+export { dom, $, $$, onAnimationEnd }

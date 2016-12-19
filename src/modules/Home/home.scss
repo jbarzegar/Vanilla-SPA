@@ -1,29 +1,9 @@
 .hero {
-    @extend %animated;
-    animation-duration: 0.8s;
-    color: white;
-    box-sizing: border-box;
-    padding: rem(10) rem(100);
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 0;
-    position: absolute;
-
-    button {
-        cursor: pointer;
-        background: none;
-        border: solid 1px rgba(white, 0.5);
-        padding: rem(10) rem(40);
-        border-radius: rem(5);
-        font-size: rem(20);
-        color: white;
-        transition: all ease 0.3s;
-        &:hover {
-            background: rgba(white, 0.2);
-        }
-    }
+    color: white;
+    padding: rem(10) rem(100);
 
     h1, h2, button {
         @extend %animated;
@@ -45,7 +25,7 @@
     }
 
     h2 {
-        color: rgba(white, 0.6);
+        color: $sub_white;
     }
 }
 

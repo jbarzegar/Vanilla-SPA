@@ -1,5 +1,4 @@
 import { dom, $, onAnimationEnd } from '../helpers/dom'
-import router from '../helpers/router'
 
 export default () => {
   dom.fetchPage('home.html')
@@ -9,13 +8,8 @@ export default () => {
 }
 
 function init() {
-  // Animate in hero
-  const hero = $('.hero')
-  hero.classList.add('fadeIn')
-  // After animation animate in children
-  onAnimationEnd(hero, () => {
-    animateChildren()
-  })
+  dom.transitionIn()
+    .then(() => animateChildren())
 }
 
 function animateChildren() {
@@ -37,11 +31,5 @@ function animateChildren() {
 }
 
 function goToAbout() {
-  const hero = $('.hero')
-  hero.classList.remove('fadeIn')
-  hero.classList.add('fadeOut')
-
-  onAnimationEnd(hero, () => {
-    router.navigate('/about')
-  })
+  dom.transitionOut('/about')
 }

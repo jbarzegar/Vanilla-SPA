@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "James Barzegar",
   "license": "MIT",
+  "scripts": {
+      "start": "gulp default"
+  },
   "devDependencies": {
     "autoprefixer": "^6.5.4",
     "babel-core": "^6.20.0",

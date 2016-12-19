@@ -12,6 +12,17 @@
     animation-fill-mode: both;
 }
 
+.section-transition-container {
+    @extend %animated;
+    animation-duration: 0.8s;
+    background: $main_purple;
+    box-sizing: border-box;
+    z-index: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -65,4 +76,53 @@
 
 .fadeOut {
   animation-name: fadeOut;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-5%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes growIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.growIn {
+    animation-name: growIn;
 }
