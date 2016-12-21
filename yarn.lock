@@ -1236,6 +1236,13 @@ css@2.X:
     source-map-resolve "^0.3.0"
     urix "^0.1.0"
 
+csso@^2.0.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/csso/-/csso-2.3.0.tgz#cd1abed15055808f1428a9cd86a02f05dae926e3"
+  dependencies:
+    clap "^1.0.9"
+    source-map "^0.5.3"
+
 csso@~2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/csso/-/csso-2.2.1.tgz#51fbb5347e50e81e6ed51668a48490ae6fe2afe2"
@@ -2401,6 +2408,14 @@ gulp:
     tildify "^1.0.0"
     v8flags "^2.0.2"
     vinyl-fs "^0.3.0"
+
+gulp-csso:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gulp-csso/-/gulp-csso-2.0.0.tgz#3237bc949736cd6704c929ca3952ce071021ed84"
+  dependencies:
+    csso "^2.0.0"
+    gulp-util "^3.0.6"
+    vinyl-sourcemaps-apply "^0.2.1"
 
 gulp-decompress@^1.2.0:
   version "1.2.0"
@@ -4709,7 +4724,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@^2.2.6, rimraf@^2.2.8, rimraf@^2.5.4, rimraf@~2.5.1, rimraf@~2.5.4, rimraf@2:
+rimraf, rimraf@^2.2.6, rimraf@^2.2.8, rimraf@^2.5.4, rimraf@~2.5.1, rimraf@~2.5.4, rimraf@2:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
@@ -5602,7 +5617,7 @@ vinyl-named:
   dependencies:
     through "^2.3.6"
 
-vinyl-sourcemaps-apply@^0.2.0:
+vinyl-sourcemaps-apply@^0.2.0, vinyl-sourcemaps-apply@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/vinyl-sourcemaps-apply/-/vinyl-sourcemaps-apply-0.2.1.tgz#ab6549d61d172c2b1b87be5c508d239c8ef87705"
   dependencies:

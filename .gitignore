@@ -3,5 +3,6 @@ node_modules/
 
 *.log
 
-# Ignore build
+# Ignore build and dist
 .build/
+dist/

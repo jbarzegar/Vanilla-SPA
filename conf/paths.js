@@ -29,6 +29,10 @@ const styles = {
       path.join('src', 'modules', '**', `*.${styleExt}`)
     ],
     out: path.join('.build', 'css')
+  },
+  prod: {
+    in: path.join('src', 'assets', 'styles', `${styleEntry}`),
+    out: path.join('dist', 'css')
   }
 }
 
@@ -44,10 +48,11 @@ const images = {
       path.join(imgPath, '*.svg')
     ],
     out: path.join('.build', 'img')
+  },
+  prod: {
+    out: path.join('dist', 'img')
   }
 }
-
-console.log(images.dev.in)
 
 const html = {
   dev: {
@@ -55,6 +60,10 @@ const html = {
     watch: path.join('src', 'templates', '**', `*.${markupExt}`),
     root_out: path.join('.build'),
     templates_out: path.join('.build', 'templates')
+  },
+  prod: {
+    root_out: path.join('dist'),
+    templates_out: path.join('dist', 'templates')
   }
 }
 
