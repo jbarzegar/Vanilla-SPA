@@ -7,14 +7,6 @@
     <title>Hello world!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <!-- Trim trailing slash (it breaks the router) -->
-    <script>
-        var pattern = /\/$/;
-        if (window.location.pathname.match(pattern) && window.location.pathname !== '/') {
-            window.location.pathname = window.location.pathname.replace(/\/$/, "");
-            console.log(window.location.pathname)
-        }
-    </script>
 </head>
 <body>
 
