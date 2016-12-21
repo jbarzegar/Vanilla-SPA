@@ -1,18 +1,18 @@
 .about-section, .about-section .inner-wrap {
-    display: flex;
+    @extend %flex;
 }
 .about-section {
     min-height: rem(365);
     height: 50vh;
     .picture-wrap {
-        flex: 1 1 30%;
+        flex: 1 1 40%;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
     .inner-wrap {
         flex-direction: column;
-        flex: 1 1 70%;
+        flex: 1 1 60%;
         justify-content: center;
         margin: 0 auto;
         width: 80%;

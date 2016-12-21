@@ -1,4 +1,4 @@
-import { dom } from '../helpers/dom'
+import { dom, $ } from '../helpers/dom'
 
 export default () => {
   dom.fetchPage('contact.html')
@@ -8,6 +8,10 @@ export default () => {
 }
 
 function init() {
-  // dom.changeNav('contact')
-  return true
+  dom.transitionIn()
+    .then(animateChildren())
+}
+
+function animateChildren() {
+  $('.contact-container').classList.add('fadeInUpSmall')
 }

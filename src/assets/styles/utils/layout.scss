@@ -1,0 +1,15 @@
+%flex {
+    display: flex;
+}
+
+%flex-column {
+    flex-direction: column;
+}
+
+%align-middle {
+    align-items: center;
+}
+
+%justify-center {
+    justify-content: center;
+}

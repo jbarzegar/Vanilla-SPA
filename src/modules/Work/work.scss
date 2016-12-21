@@ -17,16 +17,16 @@
     }
 
     .feature-container {
+        @extend %flex;
         background-color: rgba(white, 0.1);
         border: 1px solid rgba(white, 0.3);
         border-radius: rem(10);
         box-sizing: border-box;
-        display: flex;
         flex-wrap: wrap;
         article {
+            @extend %flex;
             box-sizing: border-box;
             flex: 1 1 50%;
-            display: flex;
             padding: rem(10) rem(20);
             border-top: 1px solid rgba(white, 0.3);
             &:nth-child(-n + 2) {

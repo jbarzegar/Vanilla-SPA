@@ -1,4 +1,7 @@
 .navbar {
+    @extend %flex;
+    @extend %flex-column;
+    @extend %justify-center;
     box-sizing: border-box;
     position: fixed;
     bottom: 0;
@@ -6,14 +9,9 @@
     left: 0;
     z-index: 9999;
     height: 100vh;
-
     background-color: $side_purple;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 25%;
-
-    padding: 0 rem(40);
+    width: 20%;
+    padding-right: rem(40);
 
     li, li a {
         transition: all ease 0.3s;

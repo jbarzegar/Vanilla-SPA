@@ -1,0 +1,105 @@
+.contact-container {
+    @extend %animated;
+    animation-duration: 1s;
+    padding: rem(80) rem(90) 0;
+    background: $main_purple;
+    h2, label {
+        color: white;
+    }
+    h4, h5, input, textarea, a, span.fa {
+        color: $sub_white;
+    }
+    h2 {
+        font-size: rem(30);
+    }
+    h4 {
+        line-height: 1.4;
+        margin-bottom: rem(40);
+    }
+
+    h4, h5 {
+        font-weight: 400;
+    }
+
+    h5 {
+        font-size: rem(18);
+    }
+
+    label {
+        font-size: rem(20);
+        font-weight: 700;
+    }
+
+    input, textarea {
+        background: rgba(#FFF, 0.06);
+        border: 1px solid rgba(#FFF, 0.2);
+        box-sizing: border-box;
+        font-size: rem(12);
+        margin-top: rem(10);
+        margin-bottom: rem(10);
+        border-radius: rem(5);
+        outline: $sub_white;
+    }
+
+    input {
+        min-height: rem(50);
+        margin: rem(20) 0;
+        padding: 0 rem(5);
+    }
+
+    textarea {
+        padding: rem(10);
+        min-height: rem(150);
+        margin-bottom: rem(30);
+    }
+
+    .form-container {
+        @extend %flex;
+    }
+
+    form, .social-container {
+        @extend %flex;
+        flex-wrap: wrap;
+    }
+
+    form {
+        box-sizing: border-box;
+        flex-basis: 70%;
+        padding-right: rem(40);
+    }
+
+    .social-container {
+        @extend %flex;
+        @extend %flex-column;
+        border-left: 1px solid rgba(#FFF, 0.2);
+        flex-basis: 30%;
+        padding-left: rem(40);
+
+        .address-wrap h5 {
+            margin: rem(10) 0;
+            &:last-child {
+                margin-bottom: rem(25);
+            }
+        }
+
+        h5 {
+            margin: rem(8) 0 rem(25);
+        }
+    }
+
+    .input-container {
+        @extend %flex;
+        @extend %flex-column;
+        box-sizing: border-box;
+        padding-right: rem(20)
+    }
+
+    .name-container, .email-container {
+        flex: 1 1 50%;
+    }
+
+    .message-container {
+        flex: 1 1 100%;
+    }
+
+}
