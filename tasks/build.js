@@ -74,7 +74,7 @@ function compileStyles() {
     .pipe(pcss(plugins))
     .pipe(csso())
     .pipe(size())
-    .pipe(gulp.dest(styles.dev.out))
+    .pipe(gulp.dest(styles.prod.out))
     .on('end', moveImg)
 }
 
